@@ -1,0 +1,78 @@
+<!DOCKTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Marcação de Exame</title>
+    </head>
+    <body style="background-color: lightgreen;">
+        <div>
+            <header>
+                    <hgroup>
+                        <h1 style="text-align:center;color: red;">MARCAÇÃO DE EXAME</h1>
+                        <h2 style="text-align:center;">Preencha os seus dados pessoais:</h2>
+                    </hgroup>
+                    <img align="left" style="width: 325px;height: 275px;margin-top: -8%;" src="https://image.freepik.com/fotos-gratis/jovem-medico-bonito-em-uma-tunica-medica-com-estetoscopio_1303-17818.jpg" alt="Médico em uma túnica médica com estetoscópio">
+                    <img align="right" style="width: 325px;height: 275px;margin-top: -8%;" src="https://image.freepik.com/fotos-gratis/jovem-medico-bonito-em-uma-tunica-medica-com-estetoscopio_1303-17818.jpg" alt="Médico em uma túnica médica com estetoscópio">
+            </header>
+        </div>
+        <div>
+            <table style="text-align: center;margin-left: auto;margin-right: auto;border: 1px solid black">
+                <form method="POST" action="mailto:pliniobcc@edu.unifor.br">
+                <tr>
+                    <td>
+                        <label for="nome">Nome:</label><br>
+                        <input style="width: 245px;" type="text" id="nome" name="nome">
+                    </td>
+                    <td>
+                        <label  for="sobrenome">Sobrenome:</label><br>
+                        <input style="width: 345px;" type="text" id="sobrenome" name="sobrenome">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label  for="email">E-mail:</label><br>
+                        <input style="width: 245px;" type="email" id="email" name="email"><br>
+                    </td>
+                    <td>
+                        <label for="datanasc">Data de Nascimento:</label><br>
+                        <input style="width: auto;" type="date" id="datanasc" name="datanasc"><br>
+                    </td>
+                </tr>
+            </table>
+            <div style="text-align: center;">
+                <h3>Agende o seu exame:</h3>
+                <label for="espec">Escolha uma especialidade:</label>
+                <select name="espec" id="espec">
+                    <option value="cardiologia">Cardiologia</option>
+                    <option value="oftamologia">Oftalmologia</option>
+                    <option value="otorrinolaringologia">Otorrinolaringologia</option>
+                </select>
+            </div>
+            <div style="margin-top: 2%;">
+                <table style="width: 45%;text-align: center;margin-left: auto;margin-right: auto;border: 1px solid black">
+                    <tr>
+                        <td>
+                            <label for="dataexame">Data e Horário:</label><br>
+                            <input style="width: auto;" type="datetime-local" id="dataexame" name="dataexame"><br>
+                        </td>
+                        <td>
+                            <label for="finalizar">Finalize o seu agendamento:</label><br>
+                            <input style="width: auto;" type="submit" id="finalizar" name="finalizar" onclick="mensagem()"><br>
+                        </td>
+                    </tr>
+                </form>
+                </table>
+            </div>
+        </div>
+        <div style="text-align: center;">
+            <p id="deucerto"></p>
+            <a id="outraPagina" href="https://pliniocamara.github.io/N389-84-1A-page2/" style="background-color: gold;font-size: 20px;"></a>
+        </div>
+        <script>
+            function mensagem() { 
+                document.getElementById("deucerto").innerHTML = "Agendamento realizado com sucesso!";
+                document.getElementById("outraPagina").innerHTML = "CLIQUE AQUI PARA AVALIAR";
+            }
+        </script>
+    </body>
+</html>
